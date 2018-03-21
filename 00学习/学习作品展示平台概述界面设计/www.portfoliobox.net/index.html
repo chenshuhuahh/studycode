@@ -1,0 +1,920 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans" class="zh-Hans">
+<head>
+    <title>Portfoliobox—您的在线作品展示网站</title>
+    <meta name="description" content="Portfoliobox是一个用于创建在线作品展示网站的工具，面向的用户为诸如摄影师、设计师、建筑师、造型师、模特等专业创意人员。"/>
+    <meta name="google-site-verification" content="4YpVPjK1NU3MpiEgpyTkLNUg-bR7wesIzbvGSLy5_L8" />
+
+    <meta name="generator" content="www.portfoliobox.net" />
+<meta name="author" content="www.portfoliobox.net" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<link rel="alternate" hreflang="es" href="https://www.portfoliobox.net/es" />
+<link rel="alternate" hreflang="sv" href="https://www.portfoliobox.net/se" />
+<link rel="alternate" hreflang="de" href="https://www.portfoliobox.net/de" />
+<link rel="alternate" hreflang="ko" href="https://www.portfoliobox.net/kr" />
+<link rel="alternate" hreflang="ja" href="https://www.portfoliobox.net/jp" />
+<link rel="alternate" hreflang="ru" href="https://www.portfoliobox.net/ru" />
+<link rel="alternate" hreflang="fr" href="https://www.portfoliobox.net/fr" />
+<link rel="alternate" hreflang="pt" href="https://www.portfoliobox.net/pt" />
+<link rel="alternate" hreflang="fi" href="https://www.portfoliobox.net/fi" />
+<link rel="alternate" hreflang="it" href="https://www.portfoliobox.net/it" />
+<link rel="alternate" hreflang="nl" href="https://www.portfoliobox.net/nl" />
+<link rel="alternate" hreflang="no" href="https://www.portfoliobox.net/no" />
+<link rel="alternate" hreflang="pl" href="https://www.portfoliobox.net/pl" />
+<link rel="alternate" hreflang="da" href="https://www.portfoliobox.net/dk" />
+<link rel="alternate" hreflang="tr" href="https://www.portfoliobox.net/tr" />
+<link rel="alternate" hreflang="th" href="https://www.portfoliobox.net/th" />
+<link rel="alternate" hreflang="hu" href="https://www.portfoliobox.net/hu" />
+<link rel="alternate" hreflang="el" href="https://www.portfoliobox.net/gr" />
+<link rel="alternate" hreflang="vi" href="https://www.portfoliobox.net/vn" />
+<link rel="alternate" hreflang="id" href="https://www.portfoliobox.net/id" />
+<link rel="alternate" hreflang="en" href="https://www.portfoliobox.net/" />
+<link rel="alternate" hreflang="x-default" href="https://www.portfoliobox.net" />
+
+<link rel="icon" type="image/png" href="/application/_img/salesite/common/favicon.png" />
+
+<!--<!-- source -->
+<link rel="stylesheet" href="css/salesite.out.ver.1514459650219.css" />
+<script src="js/salesite.out.ver.1514459650218.js"></script>
+<!-- /source -->
+<!--icon style-->
+<link rel="stylesheet" type="text/css" href="css/styles-new.css" />
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+<link rel="stylesheet" type="text/css" href="css/stylesheet_1.css"/>
+<link rel="stylesheet" type="text/css" href="css/stylesheet_2.css"/>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1577532509219201');
+    fbq('track', "PageView");
+</script>
+<noscript>
+    <img height="1" width="1" style="display:none" src="picture/95d538f81b9845c9a867eb6324f31dc3.gif"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+<script>
+    window.langCode = 'cn/';
+    $(document).ready(function () {
+        if (window.location.protocol != "https:") {
+            window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+        }
+    });
+</script>
+
+<script src="js/api.js" async defer></script>
+<script>
+    var fbAppId = '174431472987825';
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : fbAppId,
+            cookie     : true,  // enable cookies to allow the server to access
+                                // the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : 'v2.7', // use graph api version 2.5
+            status     : true
+        });
+    };
+
+    // Load the SDK asynchronously
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+</head>
+
+<body id="main">
+<nav id="topNav" class="clearfix">
+    <div class="mainContainer">
+        <div class="logo">
+<!--            <a href="/--><!--"><img src="--><!--/common/logo.png" alt="Portfoliobox"/></a>-->
+            <a href="/cn/"><div class="pbox-logo"></div></a>
+        </div>
+
+	    <ul class="actionMenu">
+            		        <li class="join"><a href="/cn/createaccount">注册</a></li>
+                <li class="login"><a href="/cn/login"><img src="picture/login.png" alt="Login"/>登录</a></li>
+            
+            <li class="lang" id="lang">
+			    			    <img class="mainLang" src="picture/cn.png" alt="Language"/>
+			    <div class="flags" id="flags">
+
+				    <div class="country"><a href="/en"><div class="flag en"></div></a></div>				    <div class="country"><a href="/fr"><div class="flag fr"></div></a></div>				    <div class="country"><a href="/de"><div class="flag de"></div></a></a></div>				    <div class="country"><a href="/es"><div class="flag es"></div></a></div>
+				    <div class="country"><a href="/it"><div class="flag it"></div></a></div>				    <div class="country"><a href="/pt"><div class="flag pt"></div></a></div>				    <div class="country"><a href="/nl"><div class="flag nl"></div></a></div>
+				    <div class="country"><a href="/se"><div class="flag se"></div></a></div>				    <div class="country"><a href="/no"><div class="flag no"></div></a></div>				    <div class="country"><a href="/dk"><div class="flag dk"></div></a></div>
+				    				    <div class="country"><a href="/jp"><div class="flag jp"></div></a></div>				    <div class="country"><a href="/kr"><div class="flag kr"></div></a></div>
+				    <div class="country"><a href="/ru"><div class="flag ru"></div></a></div>				    <div class="country"><a href="/fi"><div class="flag fi"></div></a></div>				    <div class="country"><a href="/hu"><div class="flag hu"></div></a></div>
+
+				    <div class="country"><a href="/pl"><div class="flag pl"></div></a></div>				    <div class="country"><a href="/tr"><div class="flag tr"></div></a></div>				    <div class="country"><a href="/gr"><div class="flag gr"></div></a></div>
+				    <div class="country"><a href="/vn"><div class="flag vn"></div></a></div>				    <div class="country"><a href="/id"><div class="flag id"></div></a></div>			    </div>
+		    </li>
+		    <li class="hamburger" id="showMobileMenu"><img src="picture/hamburger.png" alt="Login"/></li>
+	    </ul>
+
+        <ul class="mainMenu">
+            <li class="home"><a href="/cn/" class="active">概述</a></li>
+            <li><a href="/cn/examples" >示例</a></li>
+            <li><a href="/cn/pricing" >定价</a></li>
+            <li><a href="/cn/learn" >学习和支持</a></li>
+            <li><a href="/cn/news" >新闻</a></li>
+	        <li><a href="/cn/students" >学生</a></li>
+        </ul>
+
+
+
+    </div>
+
+</nav>
+
+<nav class="mobileMenu" id="mobileMenu">
+    <ul>
+        <li><a href="/cn/" class="active">概述</a></li>
+        <li><a href="/cn/examples">示例</a></li>
+        <li><a href="/cn/pricing">定价</a></li>
+        <li><a href="/cn/login">登录</a></li>
+        <li><a href="/cn/learn">学习和支持</a></li>
+        <li><a href="/cn/news">新闻</a></li>
+	    <li><a href="/cn/students">学生</a></li>
+    </ul>
+</nav>
+
+<div id="cookieUsage">
+    我们在使用cookies，您能在我们的网站上获得最佳的体验。若您继续使用我们的网站，则表示您同意使用cookies。</div>
+
+<section id="topBlock" class="mainTopBlock">
+
+    <div class="mainContainer">
+        <h2>采用自由创意生成</h2>
+        <h1>作品展示 <br/>面向创意人员</h1>
+        <h3>Portfoliobox让您搭建自己的在线作品展示平台。您可在此管理图库、博客，处理电子商务以及其它事务。</h3>
+
+        <div class="buttonGroup clearfix">
+            <div id="watchNow" class="button videoButton">立即观看</div>
+            <div class="button startButton linkButton" data-link="/cn/createaccount">开始使用</div>
+            <div class="logo"><div class="logoImage"></div></div>
+        </div>
+    </div>
+
+    <div class="plexus"></div>
+
+    <div class="lightBox"></div>
+
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/UG4KEJzhUdk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+</section>
+
+<section id="startSmallBlock">
+    <span class="break"><span class="white">今天就开始创建您的免费在线作品展示网站。</span> 升级为专业版账户并获得所有的专业功能。</span>
+    <div class="button linkButton" data-link="/cn/createaccount">立即开始</div>
+</section><section id="nicheBlock">
+    <h2>为您而打造的在线作品展示工具</h2>
+
+    <div class="niches clearfix">
+        <div class="block"><img src="picture/photographers.jpg" alt="Photographers"><div class="text">摄影师</div></div>
+        <div class="block"><img src="picture/designers.jpg" alt="Designers"><div class="text">设计师</div></div>
+        <div class="block"><img src="picture/artists.jpg" alt="Artists"><div class="text">艺术家</div></div>
+        <div class="block"><img src="picture/stylists.jpg" alt="Makeup artists"><div class="text">化妆师</div></div>
+        <div class="block"><img src="picture/models.jpg" alt="Models"><div class="text">模特</div></div>
+        <div class="block"><img src="picture/architects.jpg" alt="Architects"><div class="text">建筑师</div></div>
+
+    </div>
+</section><section id="everyThingYouNeedBlock">
+    <div class="text">
+        <h2>您搭建专业网站所需的一切</h2>
+        <h3>在您的网页浏览器中搭建您自己的作品展示平台</h3>
+        <div class="icon"><span class="icon-browser"></div>
+
+    </div>
+
+    <div class="mainImage">
+        <img class="macbook" src="picture/macbook.png">
+        <div class="overLay">
+            <img class="aPanel" src="picture/a-panel.png">
+            <img class="bPanel" src="picture/b-panel.png">
+            <img class="cPanel" src="picture/c-panel.png">
+        </div>
+    </div>
+    <ul class="icons">
+        <li><span class="featureIcon icon-galleries"></span> <span class="text">图库</span></li>
+        <li><span class="featureIcon icon-blogs"></span> <span class="text">博客</span></li>
+        <li><span class="featureIcon icon-e-commerce"></span> <span class="text">电子商务</span></li>
+        <li><span class="featureIcon icon-videos"></span> <span class="text">视频</span></li>
+    </ul>
+
+
+</section><section id="uniqueWebsiteBlock">
+    <div class="text">
+        <h2>您的网站将独一无二</h2>
+        <h3>选择客户</h3>
+        <div class="icon"><span class="icon-puzzle"></div>
+
+        <p>Portfoliobox不会强制您使用标准的主题风格。您可在任一页面中采用任意的风格，从而打造能展现您和您作品、真正独特的网站。Portfoliobox已帮助打造了超过550,000个网站—这些网站都拥有独特的风格！</p>
+    </div>
+
+    <div class="examples clearfix">
+            <div class="block"><a rel="nofollow" href="http://www.adamkrollphotography.com/" target="_blank"><img src="picture/45183.jpg" alt="online portfolio website"></a></div>
+            <div class="block"><a rel="nofollow" href="http://www.ryanlilburn.com/" target="_blank"><img src="picture/ryan2.jpg" alt="online portfolio website"></a></div>
+	        <div class="block"><a rel="nofollow" href="http://www.dpjoe.com/" target="_blank"><img src="picture/45590.jpg" alt="online portfolio website"></a></div>
+            <div class="block"><a rel="nofollow" href="http://www.eyanhigginsjones.com/" target="_blank"><img src="picture/400007.jpg" alt="online portfolio website"></a></div>
+            <div class="block"><a rel="nofollow" href="http://www.martinstranka.com/" target="_blank"><img src="picture/405980.jpg" alt="online portfolio website"></a></div>
+            <div class="block"><a rel="nofollow" href="http://www.barekoza.no/" target="_blank"><img src="picture/405972.jpg" alt="online portfolio website"></a></div>
+            <div class="block"><a rel="nofollow" href="http://www.lightmare.net/" target="_blank"><img src="picture/45907.jpg" alt="online portfolio website"></a></div>
+            <div class="block"><a rel="nofollow" href="http://www.sebastianakesson.com/" target="_blank"><img src="picture/403873.jpg" alt="online portfolio website"></a></div>
+            <div class="block"><a rel="nofollow" href="http://www.aaronpedersen.co/" target="_blank"><img src="picture/400262.jpg" alt="online portfolio website"></a></div>
+            <div class="block"><a rel="nofollow" href="http://www.aurelienlongo.com/" target="_blank"><img src="picture/400491.jpg" alt="online portfolio website"></a></div>
+            <div class="block"><a rel="nofollow" href="http://www.jefferyricht.com/" target="_blank"><img src="picture/400983.jpg"></a></div>
+            <div class="block"><a rel="nofollow" href="http://www.loveonphotography.com/" target="_blank"><img src="picture/56740.jpg" alt="online portfolio website"></a></div>
+    </div>
+
+            <div class="button linkButton" data-link="/cn/examples">
+            查看更多示例        </div>
+    </section><section id="createAndManage1Block">
+    <div class="text">
+        <h2>创建并管理您自己的网站</h2>
+        <h3>由您主导</h3>
+        <div class="icon"><span class="icon-controls"></div>
+        <p>创建并管理您自己的在线作品网站变得前所未有的容易：</p>
+    </div>
+
+    <div class="bulletPoints clearfix">
+        <div class="left clearfix">
+
+            <div class="block">
+                <span class="icon icon-edit"></span>
+                <div class="text">创建/编辑任意类型的内容</div>
+            </div>
+
+            <div class="block">
+                <span class="icon icon-build"></span>
+                <div class="text">在您的网页浏览器中完成所有创建工作</div>
+            </div>
+
+            <div class="block">
+                <span class="icon icon-nocoding"></span>
+                <div class="text">无需编码</div>
+            </div>
+
+
+        </div>
+
+        <div class="right">
+
+            <div class="block">
+                <span class="icon icon-design"></span>
+                <div class="text">设计/模板/布局</div>
+            </div>
+
+            <div class="block">
+                <span class="icon icon-webhosting"></span>
+                <div class="text">含网站托管服务</div>
+            </div>
+
+            <div class="block">
+                <span class="icon icon-domain"></span>
+                <div class="text">含免费的域名服务</div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section id="createAndManage2Block">
+
+</section><section id="pagesBlock">
+    <div class="text">
+        <h2>图库+博客+网页</h2>
+        <h3>创建任意类型的页面</h3>
+        <div class="icon"><span class="icon-templates"></div>
+        <p>
+            我们坚信自由是创意的基础，您的个人网站必须做到真正的独一无二，并通过数字作品展示来展现您的风采。因此，Portfoliobox让您无需受限于禁锢您设计的统一主题，而可自由创建任何类型的页面并随心所欲地进行组合，因此其组合而成的数量无穷无尽。        </p>
+    </div>
+
+    <div id="pagesSlideshow" class="mainImage">
+        <div class="imgContainer">
+            <img class="active" src="picture/1.jpg">
+            <img class="hide" src="picture/2.jpg">
+            <img class="hide" src="picture/3.jpg">
+            <img class="hide" src="picture/4.jpg">
+<!--            <img class="hide" src="--><!--/pageblock/5.jpg">-->
+<!--            <img class="hide" src="--><!--/pageblock/6.jpg">-->
+            <img class="hide" src="picture/7.jpg">
+            <img class="hide" src="picture/8.jpg">
+<!--            <img class="hide" src="--><!--/pageblock/9.jpg">-->
+            <img class="hide" src="picture/10.jpg">
+            <img class="hide" src="picture/11.jpg">
+        </div>
+
+    </div>
+
+</section><section id="ecommerceBlock">
+    <div class="text">
+        <h2>设置您的电子商务</h2>
+        <h3>销售艺术品、工艺品或其它作品</h3>
+        <div class="icon"><span class="icon-e-commerce"></div>
+        <p>
+            在您的网站中无缝整合了一个漂亮的电子商务商店。设置此商店很容易，但其强大的功能可满足您所有的在线销售需求。        </p>
+    </div>
+
+    <div class="mainImage">
+        <img src="picture/main.png">
+
+    </div>
+
+</section><section id="goodOnAllDevicesBlock">
+    <div class="text">
+        <h2>在所有设备上显示正常</h2>
+        <h3>内建对智能手机和平板的支持</h3>
+        <div class="icon"><span class="icon-ipad"><span class="icon-phone"></div>
+
+
+        <p>在智能手机上自动调整您的在线作品展示页面。并且我们还提供专门的设置项，便于您控制网站在移动设备上的具体展现。 </p>
+    </div>
+
+    <div class="mainImage">
+        <img src="picture/device.png">
+
+    </div>
+
+
+</section>
+<section id="marketBlock">
+    <div class="text">
+        <h2>推广您的网站</h2>
+        <h3>内建最强大的市场营销工具</h3>
+        <div class="icon">
+            <span class="icon-facebook"></span>
+            <span class="icon-twitter"></span>
+            <span class="icon-googleplus"></span>
+            <span class="icon-pinterest"></span>
+            <span class="icon-flickr"></span>
+            <span class="icon-instagram"></span>
+            <span class="icon-linkedin"></span>
+        </div>
+
+    </div>
+
+    <div class="bulletPoints clearfix">
+        <div class="left clearfix">
+
+            <div class="block">
+                <span class="icon icon-seo-optimized"></span>
+                <div class="text">经SEO优化</div>
+            </div>
+
+            <div class="block">
+                <span class="icon icon-socialmedia"></span>
+                <div class="text">整合社交媒体</div>
+            </div>
+
+
+        </div>
+
+        <div class="right clearfix">
+
+            <div class="block">
+                <span class="icon icon-share"></span>
+                <div class="text">分享功能</div>
+            </div>
+
+<!--            <div class="block clearfix">-->
+<!--                <div class="icon"><img class="marketIcon" src="--><!--/marketblock/4.png"></div>-->
+<!--                <div class="text">详尽的市场营销指导</div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="block clearfix">-->
+<!--                <div class="icon"><img class="newsletterIcon" src="--><!--/marketblock/5.png"></div>-->
+<!--                <div class="text">给用户发送新闻简报</div>-->
+<!--            </div>-->
+
+            <div class="block">
+                <span class="icon icon-statistics"></span>
+                <div class="text">使用统计数据跟进</div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<section id="findCreatives1Block">
+    <div class="text">
+        <h2>让客户找到您</h2>
+        <h3>将您的portfoliobox资料连接到find creatives</h3>
+        <div class="imageblock"><img src="picture/icon.png"></div>
+        <p>Find Creatives是一个让您用来营销自已并与全球客户进行联系的平台。您通过portfoliobox账户可以很容易地将自已的作品发送到find creatives，这只需几秒钟。现在就加入find creatives社区吧，让客户找到你！</p>
+    </div>
+</section>
+
+<section id="findCreatives2Block">
+
+</section>
+<section id="hostingBlock">
+    <div class="text">
+        <h2>网站托管</h2>
+        <h3>免费域名服务且服务器遍及全球</h3>
+        <div class="icon"><span class="icon-cloud"></div>
+        <p>使用Portfoliobox系统，您无需担心网站托管事宜。专业版账户包括了域名服务（www-地址），并且我们的服务器遍及全球各地。不管您网站的访客来自何方，都能迅速访问您的在线作品展示网站。</p>
+    </div>
+</section>
+<section id="featuresBlock">
+    <div class="text">
+        <h2>您需要的所有功能</h2>
+        <h3>打造一个完整的在线作品展示网站</h3>
+        <div class="icon"><span class="icon-features"></div>
+    </div>
+
+    <div class="featuresBox firstBox clearfix">
+        <div class="title-box">设计</div>
+        <div class="half clearfix">
+            <div class="two">
+                <div class="large">
+                    <div class="icon icon-unique-site-features"></div>
+                    <div class="title">您的网站将独一无二</div>
+                </div>
+                <div class="medium">
+                    <div class="icon icon-startpage-features"></div>
+                    <div class="title">使用任意页面作为起始页</div>
+                </div>
+            </div>
+            <div class="two">
+                <div class="small">
+                    <div class="icon icon-coverpage-features"></div>
+                    <div class="title">封面页</div>
+                </div>
+                <div class="small">
+                    <div class="icon icon-textpage-features"></div>
+                    <div class="title">文本页，博客</div>
+                </div>
+                <div class="small">
+                    <div class="icon icon-multipage-features"></div>
+                    <div class="title">分类页，多页</div>
+                </div>
+                <div class="small">
+                    <div class="icon icon-parallaxpage-features"></div>
+                    <div class="title">视差滚动页</div>
+                </div>
+                <div class="medium">
+                    <div class="icon icon-editcontent-features"></div>
+                    <div class="title">轻松编辑内容</div>
+                </div>
+            </div>
+            <div class="two">
+                <div class="small">
+                    <div class="icon icon-categorypage-features"></div>
+                    <div class="title">全部采用HTML5技术</div>
+                </div>
+                <div class="small">
+                    <div class="icon icon-contactpage-features"></div>
+                    <div class="title">联系页，地图页</div>
+                </div>
+                <div class="small">
+                    <div class="icon icon-videopage-features"></div>
+                    <div class="title">视频页</div>
+                </div>
+                <div class="small">
+                    <div class="icon icon-mappage-features"></div>
+                    <div class="title"></div>
+                </div>
+                <div class="medium">
+                    <div class="icon icon-editcolorsandfonts-features"></div>
+                    <div class="title">编辑颜色和字体</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="half clearfix">
+            <div class="two">
+                <div class="large">
+                    <div class="icon icon-customizabledesign-features"></div>
+                    <div class="title customizabledesign-text">可定制的设计</div>
+                </div>
+                <div class="medium">
+                    <div class="icon icon-css-customize-features"></div>
+                    <div class="title">定制CSS样式</div>
+                </div>
+            </div>
+            <div class="two">
+                <div class="small">
+                    <div class="icon icon-galleries-features"></div>
+                    <div class="title">图库</div>
+                </div>
+                <div class="small">
+                    <div class="icon icon-slideshows-features"></div>
+                    <div class="title"></div>
+                </div>
+                <div class="small">
+                    <div class="icon icon-premiumfonts-features"></div>
+                    <div class="title">高级字体</div>
+                </div>
+                <div class="small">
+                    <div class="icon icon-instagram-features"></div>
+                    <div class="title">Instagram页</div>
+                </div>
+                <div class="medium">
+                    <div class="icon icon-custom-html-features"></div>
+                    <div class="title">在内容区域定制html</div>
+                </div>
+            </div>
+            <div class="two">
+                <div class="small">
+                    <div class="icon icon-blog-features"></div>
+                    <div class="title">博客</div>
+                </div>
+                <div class="small">
+                    <div class="icon icon-guestbook-features"></div>
+                    <div class="title">留言簿</div>
+                </div>
+                <div class="small">
+                    <div class="icon icon-flickr-features"></div>
+                    <div class="title">Flickr页</div>
+                </div>
+                <div class="small">
+                    <div class="icon icon-nocoding-features"></div>
+                    <div class="title">无需编码</div>
+                </div>
+                <div class="medium">
+                    <div class="icon icon-commercialfree-features"></div>
+                    <div class="title">界面干净，商业使用免费</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="featuresBox clearfix">
+            <div class="title-box">电子商务</div>
+            <div class="half clearfix">
+                <div class="one">
+                    <div class="icon icon-sellimagesandproducts-features"></div>
+                    <div class="title">界面干净，商业使用免费</div>
+                </div>
+                <div class="large2 clearfix">
+                    <div class="large">
+                        <div class="icon icon-customizeddesign-features"></div>
+                        <div class="title">定制设计</div>
+                    </div>
+                    <div class="large2 large">
+                        <div class="icon icon-customproductoptions-features"></div>
+                        <div class="title">可定制产品选项</div>
+                    </div>
+
+                    <div class="large2 large">
+                        <div class="icon icon-cart-features"></div>
+                        <div class="title">完全整合的购物车</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="half clearfix">
+                <div class="one">
+                    <div class="icon icon-create-estore-features"></div>
+                    <div class="title">创建您自己的电子商店</div>
+                </div>
+                <div class="large2 clearfix">
+                    <div class="large">
+                        <div class="icon icon-paypal-features"></div>
+                        <div class="title">整合PayPal</div>
+                    </div>
+                    <div class="large2 large">
+                        <div class="icon icon-shipping-features"></div>
+                        <div class="title">处理税务区域和运送</div>
+                    </div>
+
+                    <div class="large2 large">
+                        <div class="icon icon-order-features"></div>
+                        <div class="title">订单管理</div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+    <div class="featuresBox clearfix">
+        <div class="title-box">市场营销</div>
+        <div class="half clearfix">
+
+            <div class="large3 clearfix">
+                <div class="large">
+                    <div class="icon icon-seosettings-features"></div>
+                    <div class="title">SEO设置</div>
+                </div>
+                <div class="large">
+                    <div class="icon icon-googleanalytics-features"></div>
+                    <div class="title">整合谷歌分析</div>
+                </div>
+
+                <div class="large">
+                    <div class="icon icon-visitorsstatistics-features"></div>
+                    <div class="title">访客统计</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="half clearfix">
+
+            <div class="large3 clearfix">
+                <div class="large">
+                    <div class="icon icon-socialmediashare-features"></div>
+                    <div class="title">社交媒体分享</div>
+                </div>
+                <div class="large">
+                    <div class="icon icon-facebookshare-features"></div>
+                    <div class="title">脸书分享</div>
+                </div>
+
+                <div class="large">
+                    <div class="icon icon-twittershare-features"></div>
+                    <div class="title">推特分享</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+</section><section id="quotesBlock">
+    <div class="text">
+        <h2>遍及全球的550000名用户</h2>
+        <h3>美国、欧洲、中东、中国、澳洲……</h3>
+    </div>
+
+    <div class="quotes">
+        <div class="lineContainer clearfix"><div class="lineText">"</div><div class="line"></div></div>
+        <p class="quoteText quota-1 active" data-nr="1">
+            我叫亚历克西斯。我刚通过PortfolioBox完成了我的第一个网站，这太神奇了！我真地非常喜欢我网站的效果，而且这个建站工具还提供了许多很不错的功能和模板让用户选择，将其它竞争对手远远地抛在后面。        </p>
+
+        <p class="quoteText quota-2" data-nr="2">
+            我只想表达：我被愚蠢的服务器托管、要价高昂的编码人员/设计人员等问题折磨了近一年，而使用你们的展品和服务后，我只用1小时就创建好了梦寐以求的网站/作品展示平台。我期待着近期就升级为专业版。        </p>
+
+        <p class="quoteText quota-3" data-nr="3">
+            Portfoliobox是我至今为止发现的最棒的作品展示建站工具；我会一直使用Portfoliobox作为我网站的建站工具，并在将来使用其专业版功能，这太让人兴奋了！        </p>
+
+        <p class="quoteText quota-4" data-nr="4">
+            我只想让你们知道：您的网站太了不起了，至今为止你们为我提供了非常满意的服务。无论用什么溢美之词赞扬你们都不为过！        </p>
+
+        <p class="quoteText quota-5" data-nr="5">
+            我再次感谢你们！我非常高兴我选择了Portfoliobox，真是太棒了，你们帮助我重新回到摄影领域。        </p>
+
+        <p class="quoteText quota-6" data-nr="6">
+            我正在创建一个在线的产品展示网站。我对于网站技术完全是一个门外汉，我希望你们知道：我发现你们网站在用户体验、网页导航、易于编辑、免费建站、美学等方面都做得非常了不起！加油，Portfoliobox！        </p>
+
+        <p class="quoteText quota-7" data-nr="7">
+            这是我遇到的最好的建站工具。你们太棒了，我在此感谢你们及整个团队。这个网站的方方面面都让人惊叹！        </p>
+
+        <p class="quoteText quota-8" data-nr="8">
+            我认为你们的网站是我至今为止看到的最好的产品展示建站网站。我已把它推荐给了我所有同学和同事，他们也非常喜欢。        </p>
+
+        <p class="quoteText quota-9" data-nr="9">
+            我想表达的是：你们的产品展示系统太好了！非常感谢你们提供了这么好的平台，这是我们这些不擅长编码和写网页的人的福音。希望你们再接再厉！        </p>
+
+        <p class="quoteText quota-10" data-nr="10">
+            我认为Portfoliobox是一个非常棒的网站！我曾用其它很多网站来创建图片展示网站，至今为止我发现Portfoliobox是最容易使用而且布局最漂亮的网站！我是你们的忠实粉丝，将坚定地为你们点赞！        </p>
+
+        <div class="lineContainer clearfix"><div class="line"></div><div class="lineText">"</div></div>
+
+        <div class="bullets">
+            <img src="picture/bluebullet.png" alt="" class="bullet-1" data-nr="1">
+            <img src="picture/greybullet.png" alt="" class="bullet-2" data-nr="2">
+            <img src="picture/greybullet.png" alt="" class="bullet-3" data-nr="3">
+            <img src="picture/greybullet.png" alt="" class="bullet-4" data-nr="4">
+            <img src="picture/greybullet.png" alt="" class="bullet-5" data-nr="5">
+            <img src="picture/greybullet.png" alt="" class="bullet-6" data-nr="6">
+            <img src="picture/greybullet.png" alt="" class="bullet-7" data-nr="7">
+            <img src="picture/greybullet.png" alt="" class="bullet-8" data-nr="8">
+            <img src="picture/greybullet.png" alt="" class="bullet-9" data-nr="9">
+            <img src="picture/greybullet.png" alt="" class="bullet-10" data-nr="10">
+
+
+        </div>
+
+    </div>
+</section><section id="startNowBlock">
+
+        <div class="mainContainer">
+            <h2>现在就开始免费创建在线作品展示网站！</h2>
+
+            <ul>
+                <li class="celearfix"><div class="const"><div class="number">1.</div><div class="text"> 注册并获得您的免费账户</div></div></li>
+                <li class="celearfix"><div class="const"><div class="number">2.</div><div class="text"> 使用网页浏览器来充实您的内容</div></div></li>
+                <li class="celearfix"><div class="const"><div class="number">3.</div><div class="text"> 升级到专业版并获得您自己的域名</div></div></li>
+            </ul>
+
+
+            <div class="button linkButton" data-link="/cn/createaccount">
+                开始使用            </div>
+        </div>
+
+</section><section id="footer">
+    <div class="mainContainer clearfix">
+
+        <div class="top clearfix">
+            <nav class="clearfix">
+                <ul>
+                    <li><a href="/cn/createaccount">注册</a></li>
+	                <li><a href="/cn/createaccount">登录</a></li>
+                    <li><a href="/cn/examples">示例</a></li>
+                    <li><a href="/cn/pricing">定价</a></li>
+	                <li><a href="/cn/students">学生</a></li>
+                </ul>
+
+	            <ul class="block3">
+		            <li><a href="/photography-portfolio">摄影师</a></li>
+		            <li><a href="/designer-portfolio">设计师</a></li>
+		            <li><a href="/art-portfolio">艺术家</a></li>
+		            <li><a href="/makeup-artist-website">化妆师</a></li>
+		            <li><a href="/model-website">模特</a></li>
+		            <li><a href="/architect-portfolio">建筑师</a></li>
+	            </ul>
+
+                <ul class="block3">
+	                <li><a href="/learn">学习和支持</a></li>
+	                <li><a href="/news">新闻</a></li>
+	                <li><a href="/cn/about">关于我们与联系信息</a></li>
+	                <li><a href="/cn/press">传媒</a></li>
+	                <li><a href="/cn/license">一般条款</a></li>
+	                <li><a target="_blank" href="https://www.findcreatives.com/">Find Creatives</a></li>
+                </ul>
+
+
+            </nav>
+
+            <div class="contactInfo">
+                Portfoliobox Stockholm AB<br/>
+                Gustavslundsvägen 151B<br/>
+                167 51 Bromma<br/>
+                瑞典斯德哥尔摩<br/>
+                            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="bottom clearfix">
+            <div class="logo">
+                <div class="logoImage"></div>
+            </div>
+
+            <ul class="socialMedia">
+                <li><a target="_blank" href="https://www.facebook.com/portfoliobox"><span
+                            class="icon icon-facebook"></span></a></li>
+                <li><a target="_blank" href="https://twitter.com/portfoliobox"><span
+                            class="icon icon-twitter"></span></a></li>
+                <li><a target="_blank" href="https://plus.google.com/103476120225460848054/posts"><span
+                            class="icon icon-googleplus"></span></a></li>
+                <li><a target="_blank" href="http://www.pinterest.com/portfoliobox/"><span
+                            class="icon icon-pinterest"></span></a></li>
+                <li><a target="_blank" href="http://flickr.com/portfoliobox"><span class="icon icon-flickr"></span></a>
+                </li>
+                <li><a target="_blank" href="https://instagram.com/portfoliobox/"><span
+                            class="icon icon-instagram"></span></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/company/portfoliobox"><span
+                            class="icon icon-linkedin"></span></a></li>
+            </ul>
+        </div>
+    </div>
+
+</section>
+
+<div class="newfooter">
+    <div class="footerContainer">
+        <span class="menuLeft services">
+        <a class="service openPopUp">服务</a>
+        </span>
+        <span class="separator services"></span>
+        <span class="menuLeft socialmedia">
+            <a class="icon icon-facebook facebookIcon" target="_blank"
+               href="https://www.facebook.com/portfoliobox"></a>
+            <a target="_blank" href="https://twitter.com/portfoliobox" class="icon icon-twitter"></a>
+            <a target="_blank" href="https://instagram.com/portfoliobox/" class="icon icon-instagram"></a>
+            <a target="_blank" href="https://plus.google.com/103476120225460848054/posts"
+               class="icon icon-googleplus"></a>
+            <a target="_blank" href="http://www.pinterest.com/portfoliobox/"
+               class="icon icon-pinterest"></a>
+            <a target="_blank" href="http://flickr.com/portfoliobox" class="icon icon-flickr"></a>
+            <a target="_blank" href="https://www.linkedin.com/company/portfoliobox"
+               class="icon icon-linkedin"></a>
+        </span>
+    </div>
+
+</div>
+
+<div id="servicePopup">
+	<div class="dropBg"></div>
+	<div class="dropContent">
+		<div class="innerContainer">
+			<div class="icon icon-close"></div>
+			<div class="portfoliobox serviceBox">
+				<div class="textContainer">
+					<div class="serv-title">创建一个专业网站</div>
+					<div class="serv-content">加入Portfoliobox，然后创建一个可以反映您创造力的专业在线作品网站。</div>
+					<a href="/cn/createaccount">
+						<div class="btns btn-blue">开始</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="findcreatives serviceBox">
+				<div class="textContainer">
+					<div class="serv-title">让客户找到您！</div>
+					<div class="serv-content">Find Creatives是最好的创意人员名录。用Portfoliobox注册，让您身边的人找到您！</div>
+					<a target="_blank" href="https://www.findcreatives.com/signup">
+						<div class="btns btn-orange">加入Find Creatives</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+<script>
+    $(function(){
+        saleSite.main.init();
+    });
+
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-24489650-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<script type="application/ld+json">
+ {
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	"url": "https://www.portfoliobox.net/",
+	"name": "Portfoliobox",
+	"description": "Portfoliobox is a tool for creating online portfolio websites used by professional creatives like photographers, designers, architects, stylists, models etc."
+ }
+ </script>
+ <script type="application/ld+json">
+ {
+	 "@context": "http://schema.org",
+	 "@type": "Organization",
+	 "name": "Portfoliobox",
+	 "legalName" : "Portfoliobox Stockholm AB",
+	 "url": "https://www.portfoliobox.net",
+	 "logo": "https://d28avw9ny3vgf2.cloudfront.net/application/_img/salesite/common/logo-color.png",
+	 "foundingDate": "2012",
+	 "founders": [{
+	    "@type": "Person",
+	    "name": "Hamid Abouei"
+     },
+     {
+	    "@type": "Person",
+	    "name": "Gustav Degerman"
+     }],
+	 "address": {
+		 "@type": "PostalAddress",
+		 "streetAddress": "Gustavslundsvägen 151B",
+		 "addressLocality": "Bromma",
+		 "addressRegion": "Stockholm",
+		 "postalCode": "16751",
+		 "addressCountry": "Sweden"
+     },
+	 "contactPoint": {
+		 "@type": "ContactPoint",
+		 "contactType": "Customer support",
+		 "email": "support@portfoliobox.net",
+		 "telephone": "+46(0)70-257 90 16",
+		 "url": "http://www.portfoliobox.net/about"
+     },
+	 "sameAs": [
+		 "https://www.facebook.com/portfoliobox",
+		 "https://twitter.com/portfoliobox",
+		 "https://plus.google.com/103476120225460848054/posts",
+		 "https://pinterest.com/portfoliobox/",
+		 "https://www.flickr.com/photos/portfoliobox",
+		 "https://www.instagram.com/portfoliobox/",
+		 "https://www.linkedin.com/company/portfoliobox"
+ ]}
+</script>
+
+<script type='text/javascript'>var fc_CSS=document.createElement('link');fc_CSS.setAttribute('rel','stylesheet');var fc_isSecured = (window.location && window.location.protocol == 'https:');var fc_lang = document.getElementsByTagName('html')[0].getAttribute('lang'); var fc_rtlLanguages = ['ar','he']; var fc_rtlSuffix = (fc_rtlLanguages.indexOf(fc_lang) >= 0) ? '-rtl' : '';fc_CSS.setAttribute('type','text/css');fc_CSS.setAttribute('href',((fc_isSecured)? 'https://d36mpcpuzc4ztk.cloudfront.net':'http://assets1.chat.freshdesk.com')+'/css/visitor'+fc_rtlSuffix+'.css');document.getElementsByTagName('head')[0].appendChild(fc_CSS);var fc_JS=document.createElement('script'); fc_JS.type='text/javascript'; fc_JS.defer=true;fc_JS.src=((fc_isSecured)?'https://d36mpcpuzc4ztk.cloudfront.net':'http://assets.chat.freshdesk.com')+'/js/visitor.js';(document.body?document.body:document.getElementsByTagName('head')[0]).appendChild(fc_JS);window.livechat_setting= 'eyJ3aWRnZXRfc2l0ZV91cmwiOiJwb3J0Zm9saW9ib3guZnJlc2hkZXNrLmNvbSIsInByb2R1Y3RfaWQiOm51bGwsIm5hbWUiOiJQb3J0Zm9saW9ib3giLCJ3aWRnZXRfZXh0ZXJuYWxfaWQiOm51bGwsIndpZGdldF9pZCI6ImQ3NzY3NGU0LTljN2UtNDljZC1hYjhjLTAzY2FjZTAzZjJiYiIsInNob3dfb25fcG9ydGFsIjpmYWxzZSwicG9ydGFsX2xvZ2luX3JlcXVpcmVkIjpmYWxzZSwibGFuZ3VhZ2UiOiJlbiIsInRpbWV6b25lIjoiU3RvY2tob2xtIiwiaWQiOjMxMDAwMDE3MTczLCJtYWluX3dpZGdldCI6MSwiZmNfaWQiOiJkNDFkMWJmYTJiZmY3Zjc0YmQ5MDljN2NhYWUwZTg5OSIsInNob3ciOjEsInJlcXVpcmVkIjoyLCJoZWxwZGVza25hbWUiOiJQb3J0Zm9saW9ib3giLCJuYW1lX2xhYmVsIjoiTmFtZSIsIm1lc3NhZ2VfbGFiZWwiOiJNZXNzYWdlIiwicGhvbmVfbGFiZWwiOiJQaG9uZSIsInRleHRmaWVsZF9sYWJlbCI6IlRleHRmaWVsZCIsImRyb3Bkb3duX2xhYmVsIjoiRHJvcGRvd24iLCJ3ZWJ1cmwiOiJwb3J0Zm9saW9ib3guZnJlc2hkZXNrLmNvbSIsIm5vZGV1cmwiOiJjaGF0LmZyZXNoZGVzay5jb20iLCJkZWJ1ZyI6MSwibWUiOiJNZSIsImV4cGlyeSI6MCwiZW52aXJvbm1lbnQiOiJwcm9kdWN0aW9uIiwiZW5kX2NoYXRfdGhhbmtfbXNnIjoiVGhhbmsgeW91ISEhIiwiZW5kX2NoYXRfZW5kX3RpdGxlIjoiRW5kIiwiZW5kX2NoYXRfY2FuY2VsX3RpdGxlIjoiQ2FuY2VsIiwic2l0ZV9pZCI6ImQ0MWQxYmZhMmJmZjdmNzRiZDkwOWM3Y2FhZTBlODk5IiwiYWN0aXZlIjoxLCJyb3V0aW5nIjp7ImNob2ljZXMiOnsiVGVjaG5pY2FsIHN1cHBvcnQiOlsiMCJdLCJSZXBvcnQgYSBidWciOlsiMCJdLCJCaWxsaW5nIGlzc3VlL3F1ZXN0aW9uIjpbIjAiXSwiT3RoZXIiOlsiMCJdLCJkZWZhdWx0IjpbIjAiXX0sImRyb3Bkb3duX2Jhc2VkIjoiZmFsc2UifSwicHJlY2hhdF9mb3JtIjoxLCJidXNpbmVzc19jYWxlbmRhciI6bnVsbCwicHJvYWN0aXZlX2NoYXQiOjAsInByb2FjdGl2ZV90aW1lIjoxMjAsInNpdGVfdXJsIjoicG9ydGZvbGlvYm94LmZyZXNoZGVzay5jb20iLCJleHRlcm5hbF9pZCI6bnVsbCwiZGVsZXRlZCI6MCwibW9iaWxlIjoxLCJhY2NvdW50X2lkIjpudWxsLCJjcmVhdGVkX2F0IjoiMjAxNy0wOC0yOVQwODoxNDo0Ni4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTctMTAtMTZUMTI6MzA6NTIuMDAwWiIsImNiRGVmYXVsdE1lc3NhZ2VzIjp7ImNvYnJvd3Npbmdfc3RhcnRfbXNnIjoiWW91ciBzY3JlZW5zaGFyZSBzZXNzaW9uIGhhcyBzdGFydGVkIiwiY29icm93c2luZ19zdG9wX21zZyI6IllvdXIgc2NyZWVuc2hhcmluZyBzZXNzaW9uIGhhcyBlbmRlZCIsImNvYnJvd3NpbmdfZGVueV9tc2ciOiJZb3VyIHJlcXVlc3Qgd2FzIGRlY2xpbmVkIiwiY29icm93c2luZ19hZ2VudF9idXN5IjoiQWdlbnQgaXMgaW4gc2NyZWVuIHNoYXJlIHNlc3Npb24gd2l0aCBjdXN0b21lciIsImNvYnJvd3Npbmdfdmlld2luZ19zY3JlZW4iOiJZb3UgYXJlIHZpZXdpbmcgdGhlIHZpc2l0b3LigJlzIHNjcmVlbiIsImNvYnJvd3NpbmdfY29udHJvbGxpbmdfc2NyZWVuIjoiWW91IGhhdmUgYWNjZXNzIHRvIHZpc2l0b3LigJlzIHNjcmVlbi4iLCJjb2Jyb3dzaW5nX3JlcXVlc3RfY29udHJvbCI6IlJlcXVlc3QgdmlzaXRvciBmb3Igc2NyZWVuIGFjY2VzcyAiLCJjb2Jyb3dzaW5nX2dpdmVfdmlzaXRvcl9jb250cm9sIjoiR2l2ZSBhY2Nlc3MgYmFjayB0byB2aXNpdG9yICIsImNvYnJvd3Npbmdfc3RvcF9yZXF1ZXN0IjoiRW5kIHlvdXIgc2NyZWVuc2hhcmluZyBzZXNzaW9uICIsImNvYnJvd3NpbmdfcmVxdWVzdF9jb250cm9sX3JlamVjdGVkIjoiWW91ciByZXF1ZXN0IHdhcyBkZWNsaW5lZCAiLCJjb2Jyb3dzaW5nX2NhbmNlbF92aXNpdG9yX21zZyI6IlNjcmVlbnNoYXJpbmcgaXMgY3VycmVudGx5IHVuYXZhaWxhYmxlICIsImNvYnJvd3NpbmdfYWdlbnRfcmVxdWVzdF9jb250cm9sIjoiQWdlbnQgaXMgcmVxdWVzdGluZyBhY2Nlc3MgdG8geW91ciBzY3JlZW4gIiwiY2Jfdmlld2luZ19zY3JlZW5fdmkiOiJBZ2VudCBjYW4gdmlldyB5b3VyIHNjcmVlbiAiLCJjYl9jb250cm9sbGluZ19zY3JlZW5fdmkiOiJBZ2VudCBoYXMgYWNjZXNzIHRvIHlvdXIgc2NyZWVuICIsImNiX3ZpZXdfbW9kZV9zdWJ0ZXh0IjoiWW91ciBhY2Nlc3MgdG8gdGhlIHNjcmVlbiBoYXMgYmVlbiB3aXRoZHJhd24gIiwiY2JfZ2l2ZV9jb250cm9sX3ZpIjoiQWxsb3cgYWdlbnQgdG8gYWNjZXNzIHlvdXIgc2NyZWVuICIsImNiX3Zpc2l0b3Jfc2Vzc2lvbl9yZXF1ZXN0IjoiQWdlbnQgc2Vla3MgYWNjZXNzIHRvIHlvdXIgc2NyZWVuICJ9fQ==';</script>
+
+</body>
+</html>

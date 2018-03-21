@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>offset偏移量</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #outer {
+            margin: 50px auto;
+            width: 180px;
+            height: 180px;
+            padding: 50px;
+            border: 10px solid #000;
+            background: deeppink;
+        }
+
+        #inner {
+            width: 80px;
+            height: 80px;
+            padding: 50px;
+            border: 10px solid #000;
+            background: lightblue;
+        }
+        #center{
+            width: 50px;
+            height: 50px;
+            border: 10px solid #000;
+            background: lightgreen;
+        }
+    </style>
+</head>
+<body>
+<div id="outer">
+    <div id="inner">
+        <div id="center"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    var center = document.getElementById("center"),
+        inner = document.getElementById("inner"),
+        outer = document.getElementById("outer");
+    inner.style.position = "absolute";
+    outer.style.position = "relative";
+//    offset:等同于jQuery中的offset方法，实现获取页面中任意一个元素，
+    // 距离body的偏移(包含左偏移和上偏移)，不管当前的元素的父级参照物是谁
+//    获取的结果是一个对象{left:距离body的左偏移，top:距离body的上偏移}
+//    在标准的IE8浏览器中，我们使用的是offsetLeft/offsetTop其实是把父级参照物的边框已经算在内了
+    function offset(curEle) {
+        var totalLeft = null,
+            totalTop = null,
+            par = curEle.offsetParent;
+//        首先把自己本身的进行累加
+        totalLeft += curEle.offsetLeft;
+        totalTop += curEle.offsetTop;
+//        只要没有找到body，我们就把父级参照物的边框和偏移量也进行累加
+        while (par){
+//            不是标准的IE8浏览器，我们才进行累加边框
+            if(navigator.userAgent.indexOf("MSIE 8.0")===-1){
+//                累加父级参照物的边框
+                totalLeft += par.clientLeft;
+                totalTop += par.clientTop;
+            }
+//            累加父级参照物本身的偏移
+            totalLeft += par.offsetLeft;
+            totalTop += par.offsetTop;
+
+            par = par.offsetParent;
+        }
+        return {left:totalLeft,top:totalTop}
+    }
+    console.log(offset(center).left);
+</script>
+</body>
+</html>

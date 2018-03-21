@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>复选框的使用</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.main{
+		position: relative;
+		width: 500px;
+		height: 500px;
+		margin: 0 auto;
+	}
+	form{
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		top: 50%;
+		left: 50%;
+		margin: -100px 0 0 -100px;
+	}
+	.del{  
+    width: 70px;  
+    background: #ccc;  
+    line-height: 30px;  
+    text-align: center;  
+    display: inline-block;  
+}  
+	</style>
+</head>
+<body>
+<div class="main">
+<form action="" method="get" class="formcheck">
+<div class="row"><label for="apple"><input type="checkbox" id="apple" name="fruit">apple</label></div>
+<div class="row"><label for="banana"><input type="checkbox" id="banana" name="fruit">banana</label></div>
+<div class="row"><label for="pear"><input type="checkbox" id="pear" name="fruit">pear</label></div>
+<div class="row"><label for="orange"><input type="checkbox" id="orange" name="fruit">orange</label></div>
+<div class="btnrow">
+<div class="all"><label for="allbtn"><input type="checkbox" id="allbtn" name="allfruit">all</label></div>
+<div class="del">del</div>
+</div>
+</form>
+</div>
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+	$("#allbtn").click(function() {
+		if($(this).is(':checked')){
+			$("input[name='fruit']").each(function(i,k){
+				$(k).prop('checked',true);
+			})
+		}else{
+			$("input[name='fruit']").each(function(i,k){
+				$(k).prop('checked',false);
+			})
+		}
+	})
+	$(".row label").each(function(){
+		$(this).click(function(){
+			var $temp = $("input[name='fruit']");
+			if($temp.length == $temp.filter(':checked').length){
+				$("#allbtn").prop('checked',true);
+			}else{
+				$("#allbtn").prop('checked',false);
+			}
+		})
+	})
+	$ (".del").click(function(){  
+        $('.row label input:checked').parent().parent().remove();   
+            //隐藏所有被选中的input元素  
+             //parent() 获得当前匹配元素集合中每个元素的父元素,  
+    })  
+	</script>
+</body>
+</html>

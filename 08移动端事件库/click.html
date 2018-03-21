@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>移动端事件click</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #eee;
+        }
+
+        .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            -webkit-transition: all 1s linear 0s;
+            transition: all 1s linear 0s;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<script type="text/javascript" src="js/fastClick.js"></script>
+<script type="text/javascript">
+    //解决300ms延迟问题方法2,使用fastClick.js文件
+    FastClick.attach(document.body);
+    //    移动端使用click方法会存在300ms的延迟
+    var oBox = document.querySelector('.box');
+    oBox.addEventListener('click', function () {
+        this.style.transitionDuration = '1s';
+        this.style.webkitTransform = 'rotate(360deg)';
+        window.setTimeout(function () {
+            this.style.transitionDuration = '0s';
+            this.style.webkitTransform = 'rotate(0deg)';
+        }.bind(this),1000);
+    }, false);
+    //解决300ms延迟问题，使用touch模型实现点击操作（单击&&双击）
+   /* var oBox = document.querySelector('.box');
+    function on(curEle, type, fn) {
+        curEle.addEventListener(type, fn);
+    }
+    on(oBox, 'touchstart', function (ev) {
+        var point = ev.touches[0];
+        this['staX'] = point.clientX;
+        this['staY'] = point.clientY;
+        this['isMove'] = false;
+    });
+    on(oBox, 'touchmove', function (ev) {
+        var point = ev.touches[0];
+        var newX = point.clientX,
+            newY = point.clientY;
+//        判断是否发生滑动，我们需要判断偏移的值是否在30px之内
+        if (Math.abs(newX - this['staX']) > 30 || Math.abs(newY - this['staY']) > 30) {
+            this['isMove'] = true;
+        }
+    });
+    on(oBox, 'touchend', function (ev) {
+        //点击，实现可以连续的点击旋转原理：定义一个定时器，当用1s时间旋转到360°的时候，
+        // 立刻让盒子的位置变为0°，由于有1s的动画效果，点击之后就会1s实现一次动画无限自动旋转
+        // 所以需要在定时器中让0°时候，也让动画的持续时间变为0，当再次点击的时候持续时间变为1
+        if (this['isMove'] === false) {
+            this.style.transitionDuration = '1s';
+            this.style.webkitTransform = 'rotate(360deg)';
+            window.setTimeout(function () {
+                this.style.transitionDuration = '0s';
+                this.style.webkitTransform = 'rotate(0deg)';
+            }.bind(this), 1000);
+        } else {//滑动
+            this.style.background = 'red';
+        }
+    });*/
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>jsonp2</title>
+</head>
+<body>
+<div id="box"></div>
+<script type="text/javascript">
+    var box = document.getElementById("box");
+    function fn(data) {
+        console.log(data.ret);
+        box.innerHTML = data.ret;
+    }
+</script>
+<script type="text/javascript" src="http://video.qq.com/fcgi-bin/logout?clear=1&callback=fn"></script>
+</body>
+</html>

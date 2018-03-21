@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>iscroll局部滚动</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <style type="text/css">
+
+        html {
+            font-size: 100px;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            color: #000;
+            font-size: .14rem;
+            font-family: "microsoft Yahei", "Arial Narrow";
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: .18rem;
+        }
+
+        .header {
+            height: .5rem;
+            line-height: .5rem;
+            background: -webkit-linear-gradient(top left, #2D93CA, #00cc82, #8bc34a);
+        }
+
+        .header span {
+            float: left;
+            width: 25%;
+            text-align: center;
+        }
+
+        .content {
+            position: relative;
+            overflow: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .iScrollIndicator {
+            opacity: 0.5;
+        }
+
+        .content li {
+            height: .4rem;
+            line-height: .4rem;
+        }
+
+        .content li:nth-child(even) {
+            background-color: #ccc;
+        }
+
+        .content li span {
+            float: left;
+            width: 25%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <h1>
+        <span>编号</span>
+        <span>姓名</span>
+        <span>性别</span>
+        <span>分数</span>
+    </h1>
+</header>
+<section class="content">
+    <ul>
+    </ul>
+</section>
+<!--第一步-->
+<script type="text/javascript" src="js/ejs.min.js"></script>
+<!--第三步-->
+<script type="text/template" id="conTemplate">
+    <%$.each(matchData,function(index,item){%>
+    <li>
+        <span><%=item.num%></span>
+        <span><%=item.name%></span>
+        <span><%=item.sex%></span>
+        <span><%=item.score%></span>
+    </li>
+    <%})%>
+</script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/iscroll-5.1.3.min.js"></script>
+<script type="text/javascript">
+    //    rem
+    document.documentElement.style.fontSize = document.body.clientWidth / 320 * 100 + "px";
+
+    ~function () {
+        var $content = $('.content');
+        //计算content区域的高度
+        // 实现竖向局部滚动，我们首先需要把最外层容器的高度设定好
+        $content.css('height', document.documentElement.clientHeight - $('.header')[0].offsetHeight);
+        //    第四步 数据绑定
+        function bindHTML(data) {
+            var conTemplate = $("#conTemplate").html();
+            var result = ejs.render(conTemplate, {matchData: data});
+            $content.children('ul').html(result);
+
+            //在数据绑定完成之后再实现局部滚动
+            /*
+             * var 实例 = new IScroll(需要局部滚动的区域，{配置参数});
+             * 初始化成功后，只对当前容器中的第一个子元素实现了滚轮操作，
+             * document.querySelector('.content').querySelector('*')
+             * [设置settingd]
+             * scrollbars: true  显示滚动条，默认是不显示的(开启后，iscroll会默认向content区域
+             *           添加一个类名为iScrollVerticalScrollbar iScrollLoneScrollbar的div盒子，
+             *           这个div控制的是样式position：absolute；所以如只想让滚动条在容器中，
+             *           需要给当前的content增加position：relative)
+             * fadeScrollbars: true 滚动条当鼠标在区域中的时候显示，离开的时候消失
+             * mouseWheel: true 设置支持鼠标滚轮滚动
+             * bounce:false 禁止运动到边界之后反弹
+             * click: true iscroll为了防止滑动过程中的误操作，默认是把click禁止掉的
+             *          如果需要点击，则开启click即可
+             *
+             * [方法]
+             * myScroll.refresh() 当滚动区域的内容发生改变的时候，我们让当前的实例刷新一下
+             *                    这样的话滚动区域的相关值都会跟着重新计算
+             * myScroll.scrollTo(x,y,time) 滚动到具体的坐标位置
+             * myScroll.scrollToElement($li[$li.length - 1], 300); 300ms后滚动到最后一个元素
+             * */
+            var myScroll = new IScroll('.content', {
+                scrollbars: true,
+                fadeScrollbars: true,
+                mouseWheel: true,
+                bounce: false,
+                click: true
+            });
+            myScroll.refresh();
+//            myScroll.scrollTo(0,-1000,300);
+            var $li = $content.find('li');
+            myScroll.scrollToElement($li[$li.length - 1], 300);
+        }
+
+        //    第二步
+        $.ajax({
+            url: 'json/data.json',
+            type: 'get',
+            dataType: 'json',
+            cache: false,
+            success: bindHTML
+        });
+    }();
+</script>
+</body>
+</html>

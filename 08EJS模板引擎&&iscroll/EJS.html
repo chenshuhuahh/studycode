@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>EJS模板引擎</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <style type="text/css">
+
+        html {
+            font-size: 100px;
+        }
+
+        html, body {
+            width: 100%;
+            color: #000;
+            font-size: .14rem;
+            font-family: "microsoft Yahei", "Arial Narrow";
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: .18rem;
+        }
+
+        .header {
+            height: .5rem;
+            line-height: .5rem;
+            background: -webkit-linear-gradient(top left, #2D93CA, #00cc82, #8bc34a);
+        }
+
+        .header span {
+            float: left;
+            width: 25%;
+            text-align: center;
+        }
+
+        .content li {
+            height: .4rem;
+            line-height: .4rem;
+        }
+
+        .content li:nth-child(even) {
+            background-color: #ccc;
+        }
+
+        .content li span {
+            float: left;
+            width: 25%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <h1>
+        <span>编号</span>
+        <span>姓名</span>
+        <span>性别</span>
+        <span>分数</span>
+    </h1>
+</header>
+<section class="content">
+    <ul>
+        <!--这里动态加载节点-->
+        <!--<li>
+            <span>001</span>
+            <span>消愁</span>
+            <span>男</span>
+            <span>88</span>
+        </li>-->
+    </ul>
+</section>
+<!--第一步-->
+<script type="text/javascript" src="js/ejs.min.js"></script>
+<!--第三步-->
+<script type="text/template" id="conTemplate">
+    <%$.each(matchData,function(index,item){%>
+    <li>
+        <span><%=item.num%></span>
+        <span><%=item.name%></span>
+        <span><%=item.sex%></span>
+        <span><%=item.score%></span>
+    </li>
+    <%})%>
+</script>
+<script src="js/zepto.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    //    rem
+    document.documentElement.style.fontSize = document.body.clientWidth / 320 * 100 + "px";
+    //    第四步
+    function bindHTML(data) {
+        var conTemplate = $("#conTemplate").html();
+        var result = ejs.render(conTemplate, {matchData: data});
+        $(".content>ul").html(result);
+    }
+    //    第二步
+    $.ajax({
+        url: 'json/data.json',
+        type: 'get',
+        dataType: 'json',
+        cache: false,
+        success: bindHTML
+    });
+</script>
+</body>
+</html>

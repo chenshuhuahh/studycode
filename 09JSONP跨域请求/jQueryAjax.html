@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery的Ajax</title>
+</head>
+<body>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+    $.ajax({
+        url: 'data.txt',
+        type: 'get',
+        dataType: 'json',
+        data: null,//get请求的时候为null
+        async: true,//true为异步，false为同步
+        timeout: 3000,//设置超时时间，一般都是设定3000ms
+        cache: false,//设置get请求时不走缓存数据，原理其实就是在URL后面加上随机数，默认是true
+        success: function (data) {
+            console.log(data);
+        }
+    });
+</script>
+</body>
+</html>

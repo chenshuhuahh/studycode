@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+</head>
+<body>
+<script type="text/javascript" src="js/cookie.js"></script>
+<script type="text/javascript">
+/*		var str = "前端知识";
+	var n = escape(str);
+	console.log(n);        //%u524D%u7AEF%u77E5%u8BC6
+	var m = unescape(n);
+	console.log(m);        //前端知识
+
+	document.cookie = "age=7";
+	console.log(document.cookie);*/
+
+	cookieRender.set({
+		name: 'age',
+		value: 7
+	});
+	console.log(cookieRender.get("age"));   //7
+</script> 
+</body>
+</html>

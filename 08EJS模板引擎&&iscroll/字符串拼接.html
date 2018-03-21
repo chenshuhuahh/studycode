@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>字符串拼接显示数据</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            color: #000;
+            font-size: 14px;
+            font-family: "microsoft Yahei", "Arial Narrow";
+            overflow-x: hidden;
+        }
+
+        html {
+            font-size: 100px;
+        }
+
+        .header {
+            height: .5rem;
+            line-height: .5rem;
+            background: -webkit-linear-gradient(top left, #2D93CA, #00cc82, #8bc34a);
+        }
+
+        .header span {
+            float: left;
+            width: 25%;
+            text-align: center;
+        }
+
+        .content li {
+            height: .4rem;
+            line-height: .4rem;
+        }
+
+        .content li:nth-child(even) {
+            background-color: #ccc;
+        }
+
+        .content li span {
+            float: left;
+            width: 25%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <h1>
+        <span>编号</span>
+        <span>姓名</span>
+        <span>性别</span>
+        <span>分数</span>
+    </h1>
+</header>
+<section class="content">
+    <ul>
+        <!--这里动态加载节点-->
+        <!--<li>001</li>
+        <li>小小</li>
+        <li>男</li>
+        <li>85</li>-->
+    </ul>
+</section>
+<script src="js/zepto.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    function bindHTML(data) {
+        var str = "";
+        $.each(data, function (index, item) {
+            str += '<li>';
+            str += '<span>' + item.num + '</span>';
+            str += '<span>' + item.name + '</span>';
+            str += '<span>' + (item.sex==0?'男':'女') + '</span>';
+            str += '<span>' + item.score + '</span>';
+            str += '</li>';
+        });
+        $(".content>ul").html(str);
+    }
+    $.ajax({
+        url: 'json/data.json',
+        type: 'get',
+        dataType: 'json',
+        cache: false,
+        success: bindHTML
+    });
+</script>
+</body>
+</html>

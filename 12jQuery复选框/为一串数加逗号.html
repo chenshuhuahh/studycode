@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>为一串数字加逗号</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function change(num) {
+		var arr = num.toString().split('').reverse();
+		var temp = [];
+		for (var i = 0; i < arr.length; i++) {
+			if(i%3==0 && i!=0){
+				temp.push(",");
+				temp.push(arr[i]);
+			}else{
+				temp.push(arr[i]);
+			}
+		}
+		arr = temp.reverse().join("");
+		return arr;
+	}
+	console.log(change(1234567890));//1,234,567,890
+	</script>
+</body>
+</html>
